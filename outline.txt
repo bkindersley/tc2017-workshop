@@ -1,0 +1,8 @@
+10min - intro + basic idea of web page
+10min - basic programming principles + examples
+10min - questions
+1hr - work through programming hangman game
+		* html, css provided
+		* more complicated functions provided e.g. rendering
+		* plan is to look mostly at variables, if statements, loops
+30min - "free play", provide goals

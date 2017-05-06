@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Game</title>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="./js/given.js"></script>
+<script src="./js/hangman.js"></script>
+</head>
+<body>
+<div id="banner">
+</div>
+<div id="status">
+  <img class="hangman" src='.\img\hangman0.png'>
+  <p class="letters" id="word"> </p>
+  <p class="letters" id="guessed"> </p>
+</div>
+<div id="play">
+    <input id='letter-entry' type="text" value="">
+    <input id='letter-submit' type="submit" onclick="sumbitLetter()">
+  </form>
+</div>
+</body>
+</html>
