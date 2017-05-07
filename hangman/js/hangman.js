@@ -21,69 +21,50 @@ const ALLOWED_TRIES = 6;
 jQuery(document).ready(function(){
 
   //randomly choose word from the dictionary
-  var word_i = randomIndex(words.length);
-  var word = words[word_i];//the randomly chosen word
 
   //build an array of underscores from chosen word
-  var curr_word = [];//tracks the current state of the guesses
-  //go through each letter of word and add an
-  //underscore to curr_word
-  for (i=0; i < word.length; i++){
-    curr_word.push('_');
-  }
+  //such that each underscore corresponds to a letter
+    //create a new array
 
-  var numBlanksLeft = word.length;//track how many letters are guessed
+    //go through each letter of word and add an
+    //underscore to the new array
 
-  var curr_try = 0;//track how many guesses are used
+
+  //define variables used to track
+  //the number of blanks left
+  //the number of mistakes made
 
   //display the underscores
-  updateDisplay(curr_word);
 
   //what happens when the submit button is clicked
   sumbitLetter = function(){
     //read letter from text box
-    var letter = getSubmittedLetter();
 
     //check if the letter is in word
-    var isInWord = false;//track if letter is in word
-    //go through each letter of word
-    for (i=0;i<word.length;i++){
-      //compare the sumbitted letter to the current letter
-      if (letter == word[i]){
-        //update curr_word
-        curr_word[i] = letter;
-        //update numBlanksLeft
-        numBlanksLeft--;
-        //set isInWord true
-        isInWord = true;
-      }
-    }
-    //guessed right
-    if (isInWord){
+      //go through each letter of word
+        //compare the sumbitted letter to the current letter
+          //they are equal:
+            //update underscore array
+
+            //update number of blanks
+
+            //we know that the letter is in the word
+
+    //guessed right:
       //update the displayed word
-      updateDisplay(curr_word);
 
       //all letters guessed:
-      if(numBlanksLeft==0){
         //win!
-        endGame("win");
-      }
+
       //otherwise:
-    }
-    //guessed wrong
-    else {
-      //update try counter
-      curr_try++;
+
+    //guessed wrong:
+      //update mistakes counter
+
       //still have some tries left:
-      if(curr_try <= ALLOWED_TRIES){
         //update image
-        newImage(curr_try);
-      }
+
       //no tries left:
-      else{
         //lose :(
-          endGame("lose");
-      }
-    }
   };
 })
