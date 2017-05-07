@@ -32,6 +32,6 @@ displayMessage = function(msg){
   $('#message-container').append(pgph);
 }
 
-isAlphabetic(str){
+isAlphabetic = function(str){
   return str.match(/[a-z]/i);
 }

@@ -6,7 +6,7 @@ var words = [
   ['r','i','v','e','r'],
 ];
 
-//i chose to have 6 steps:
+//there are 6 steps:
 //0: empty
 //1: head
 //2: body
@@ -16,7 +16,7 @@ var words = [
 //6: leg
 const ALLOWED_TRIES = 6;
 
-//this line is part of the set-up
+//this is part of the set-up
 //to make sure everything loads correctly
 jQuery(document).ready(function(){
 
