@@ -33,5 +33,5 @@ displayMessage = function(msg){
 }
 
 isAlphabetic = function(str){
-  return str.match(/[a-z]/i);
+  return /^[a-z]+$/.test(str);
 }
