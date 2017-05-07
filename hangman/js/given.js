@@ -31,3 +31,7 @@ displayMessage = function(msg){
   var pgph = $('<p class = "message">' + msg + '</p>');
   $('#message-container').append(pgph);
 }
+
+isAlphabetic(str){
+  return str.match(/[a-z]/i);
+}
