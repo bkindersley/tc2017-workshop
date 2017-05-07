@@ -1,3 +1,10 @@
+resetPage = function(){
+  $('#letter-entry').removeAttr("disabled");
+  $('#letter-submit').removeAttr("disabled");
+  $('#submit').show();
+  $('#message-container').empty();
+};
+
 randomIndex = function(n){
   return Math.floor((Math.random() * n));
 };
@@ -15,6 +22,7 @@ getSubmittedLetter = function(){
 endGame = function(state){
   $('#letter-entry').attr("disabled", "disabled");
   $('#letter-submit').attr("disabled", "disabled");
+  $('#submit').hide();
   if (state === "win"){
     displayMessage("Yay! You won!");
   }

@@ -6,21 +6,24 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="./js/given.js"></script>
 <script src="./js/hangman.js"></script>
+<link rel="stylesheet" title="styles" href="./css/style.css" />
 </head>
 <body>
 <div id="banner">
 </div>
 <div id="message-container">
 </div>
-<div id="status">
-  <img class="hangman" src='.\img\hangman0.png'>
-  <p class="letters" id="word"> </p>
-  <p class="letters" id="guessed"> </p>
-</div>
-<div id="play">
-    <input id='letter-entry' type="text" value="">
-    <button id='letter-submit' onclick="sumbitLetter()">Submit</button>
-  </form>
+<div id="game">
+  <div id="status">
+    <img class="hangman" src='.\img\hangman0.png'>
+    <p class="letters" id="word">_ _ _</p>
+  </div>
+  <div id="play">
+    <div  id="submit">
+      <input id='letter-entry' type="text" value="">
+      <button id='letter-submit' onclick="sumbitLetter()">Submit</button>
+    </div>
+  </div>
 </div>
 </body>
 </html>
